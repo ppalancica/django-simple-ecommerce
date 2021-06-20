@@ -11,17 +11,16 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 import environ
 
 env = environ.Env()
 
 # read the .env file
-
 environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -132,7 +131,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
 MEDIA_URL = '/MEDIA/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-if setting.DEBUG is False:
+if DEBUG is False:
     SESSION_COOKIE_SECURE = True
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
