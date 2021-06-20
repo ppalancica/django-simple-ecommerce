@@ -141,3 +141,6 @@ cython_debug/
 .idea
 .vscode
 .atom
+
+media
+static_root
